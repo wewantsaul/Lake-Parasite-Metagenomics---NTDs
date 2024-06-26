@@ -1,0 +1,3 @@
+assignTaxonomy	minBoot = 50
+taxlevels	c("Domain","Supergroup","Division","Subdivision","Class","Order","Family","Genus","Species")
+seed	100

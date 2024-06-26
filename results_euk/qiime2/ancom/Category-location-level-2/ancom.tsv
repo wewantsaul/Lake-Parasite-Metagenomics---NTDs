@@ -1,0 +1,13 @@
+	W	Reject null hypothesis
+Eukaryota;Haptista	7	True
+Eukaryota;Obazoa	5	True
+Eukaryota:nucl;Cryptista:nucl	3	False
+Eukaryota;TSAR	2	False
+Eukaryota;CRuMs	2	False
+Eukaryota;Archaeplastida	1	False
+Eukaryota;	1	False
+;	1	False
+Eukaryota;Cryptista	0	False
+Eukaryota:plas;Archaeplastida:plas	0	False
+Eukaryota;Amoebozoa	0	False
+Eukaryota;Excavata	0	False

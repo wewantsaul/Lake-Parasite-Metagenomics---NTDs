@@ -1,0 +1,22 @@
+	W	Reject null hypothesis
+Eukaryota:plas;Cryptista:plas	13	True
+Bacteria;PVC	11	True
+Eukaryota:mito;TSAR:mito	10	True
+Eukaryota:mito;Archaeplastida:mito	10	True
+Bacteria;PANNAM	9	True
+Bacteria;Terrabacteria	7	False
+Bacteria;CCD	7	False
+Bacteria;	6	False
+Eukaryota:plas;TSAR:plas	6	False
+Bacteria;CMS	5	False
+Bacteria;Gracilicutes	5	False
+Eukaryota:plas;Archaeplastida:plas	4	False
+Eukaryota:plas;Excavata:plas	3	False
+;	3	False
+Bacteria;FCB	3	False
+Eukaryota:plas;	2	False
+Eukaryota:mito;	0	False
+Eukaryota;	0	False
+Bacteria;DST	0	False
+Eukaryota;TSAR	0	False
+Eukaryota;Obazoa	0	False

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_composition : ancom</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+  <script src="js/vega.min.js"></script>
+  <script src="js/vega-embed.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/spinkit.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+
+<div class="row">
+  <div class="col-lg-8">
+    <h3>ANCOM Volcano Plot</h3>
+    <div id="toolbar"></div>
+    
+    <div id="plot">
+      <div id="loading" class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-6">
+    <h4>ANCOM statistical results</h4>
+    
+      <p class="alert alert-warning">No significant features found</p>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Percentile abundances of features by group</h4>
+    
+      <p class="alert alert-warning">No significant features found</p>
+    
+  </div>
+</div>
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+
+
+
+
+
+<script type="text/javascript">
+  function handleErrors(errors, element, msg) {
+    console.error(errors);
+    msg = msg === undefined ? '' : msg + '<br><br>';
+    var helpMsg = '<p class="alert alert-danger"> \
+                   There was an error loading and rendering the \
+                   visualization.<br><br>' + msg + 'Please \
+                   copy-and-paste the following error messages when \
+                   reporting this error (please be aware that the content \
+                   of your analysis data and/or metadata is included in \
+                   these messages):</p>';
+    var helpMsgDiv = $('<div></div>');
+    helpMsgDiv.append(helpMsg);
+    helpMsgDiv.append('<pre><code>' + errors.join('\n\n') + '</code></pre>');
+    element.replaceWith(helpMsgDiv);
+  }
+  window.onerror = function(error) {
+    handleErrors([error], $('#loading'));
+  };
+</script>
+
+<script id="spec" type="application/json">{"$schema": "https://vega.github.io/schema/vega/v4.json", "width": 300, "height": 300, "data": [{"name": "values", "values": [{"id": ";;;;;", "clr": 0.5191596787053986, "W": 0}, {"id": "Bacteria;;;;;", "clr": 0.2913245177655824, "W": 0}, {"id": "Bacteria;CCD;Chloroflexi;Chloroflexi_X;Anaerolineae;", "clr": 0.3966144116756691, "W": 0}, {"id": "Bacteria;CCD;Chloroflexi;Chloroflexi_X;Anaerolineae;Anaerolineales", "clr": 0.7810469207838827, "W": 0}, {"id": "Bacteria;CCD;Chloroflexi;Chloroflexi_X;Anaerolineae;RBG13549", "clr": 0.8728309433460082, "W": 0}, {"id": "Bacteria;CCD;Chloroflexi;Chloroflexi_X;Chloroflexia;Chloroflexales", "clr": 1.1808164362665972, "W": 0}, {"id": "Bacteria;CCD;Chloroflexi;Chloroflexi_X;Dehalococcoidia;", "clr": 0.8127092705143603, "W": 0}, {"id": "Bacteria;CCD;Patescibacteria;Patescibacteria_X;Microgenomatia;Candidatus_Woesebacteria", "clr": 0.5098729636744196, "W": 0}, {"id": "Bacteria;CCD;Patescibacteria;Patescibacteria_X;Saccharimonadia;Saccharimonadales", "clr": 0.4663346247444488, "W": 0}, {"id": "Bacteria;CMS;Cyanobacteria;Cyanobacteria_X;Cyanophyceae;", "clr": 0.6414665156264595, "W": 0}, {"id": "Bacteria;CMS;Cyanobacteria;Cyanobacteria_X;Cyanophyceae;Chroococcales", "clr": 0.26967626270870393, "W": 0}, {"id": "Bacteria;CMS;Cyanobacteria;Cyanobacteria_X;Cyanophyceae;Nostocales", "clr": 0.5769887071754047, "W": 0}, {"id": "Bacteria;CMS;Cyanobacteria;Cyanobacteria_X;Cyanophyceae;Synechococcales", "clr": 0.34770447947721617, "W": 0}, {"id": "Bacteria;DST;Deinococcus_Thermus;Deinococcus_Thermus_X;Deinococci;Deinococcales", "clr": 8.711846858443309, "W": 9}, {"id": "Bacteria;DST;Deinococcus_Thermus;Deinococcus_Thermus_X;Deinococci;Thermales", "clr": 0.44402517799919206, "W": 1}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;;", "clr": 0.3711473387560378, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Bacteroidia;", "clr": 2.215985953047942, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Bacteroidia;Bacteroidales", "clr": 1.1049897416171217, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Bacteroidia;Chitinophagales", "clr": 1.2527684941232733, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Bacteroidia;Cytophagales", "clr": 0.34884743404953344, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Bacteroidia;Flavobacteriales", "clr": 0.44914461876532435, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Bacteroidia;Sphingobacteriales", "clr": 1.1152759498090556, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Ignavibacteria;Ignavibacteriales", "clr": 0.37536313943783867, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Ignavibacteria;Kryptoniales", "clr": 0.5387960789723486, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X;Ignavibacteria;OPB56", "clr": 0.921775089604084, "W": 0}, {"id": "Bacteria;FCB;Fibrobacteres;Fibrobacteres_X;Fibrobacteria;Fibrobacterales", "clr": 0.7593126074448939, "W": 0}, {"id": "Bacteria;FCB;Gemmatimonadetes;Gemmatimonadetes_X;Gemmatimonadetes_XX;Gemmatimonadales", "clr": 1.8811915577833325, "W": 0}, {"id": "Bacteria;Gracilicutes;Dependentiae;Dependentiae_X;Babeliae;Babeliales", "clr": 0.16114463580941737, "W": 0}, {"id": "Bacteria;Gracilicutes;Fusobacteria;Fusobacteria_X;Fusobacteriia;Fusobacteriales", "clr": 2.9283971199983148, "W": 0}, {"id": "Bacteria;Gracilicutes;Spirochaetes;Spirochaetes_X;Leptospirae;Leptospirales", "clr": 1.0106331646584252, "W": 0}, {"id": "Bacteria;PANNAM;;;;", "clr": 1.0442587487803783, "W": 0}, {"id": "Bacteria;PANNAM;Acidobacteria;Acidobacteria_X;Acidobacteriia;Solibacterales", "clr": 4.070038302324593, "W": 0}, {"id": "Bacteria;PANNAM;Acidobacteria;Acidobacteria_X;Blastocatellia_(Subgroup_4);1124", "clr": 0.5209256407054664, "W": 0}, {"id": "Bacteria;PANNAM;Acidobacteria;Acidobacteria_X;Subgroup_6;Unknown_Order", "clr": 1.723107935366493, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;;", "clr": 0.3084850837002649, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;", "clr": 0.43330940453894856, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Acetobacterales", "clr": 0.22091269401129177, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Alphaproteobacteria_X", "clr": 0.4598972505747696, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Caulobacterales", "clr": 0.7436510267148073, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Micavibrionales", "clr": 2.9167010897057133, "W": 1}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Paracaedibacterales", "clr": 0.7738766874199939, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Reyranellales", "clr": 0.376849614415073, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Rhizobiales", "clr": 0.6583384616544211, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Rhodobacterales", "clr": 0.5538227270561761, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Rhodospirillales", "clr": 0.38452592328346297, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Rickettsiales", "clr": 0.9431743216281848, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;SAR11_clade", "clr": 0.6579308555009904, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Alphaproteobacteria;Sphingomonadales", "clr": 0.3322773771794363, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;", "clr": 0.23017136282809444, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Bdellovibrionales", "clr": 2.350061441847368, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Bradymonadales", "clr": 0.5799257502980375, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Desulfarculales", "clr": 1.4840458128825216, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Desulfobacterales", "clr": 0.4533881217999473, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Desulfovibrionales", "clr": 0.38906278279522793, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Desulfuromonadales", "clr": 0.38906278279522793, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;MBNT15", "clr": 0.23648080696800064, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Myxococcales", "clr": 0.35167773193666607, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;NB1j", "clr": 4.900555384642362, "W": 8}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Oligoflexales", "clr": 0.487021380140043, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;PB19", "clr": 0.29646461343471764, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Deltaproteobacteria;Syntrophobacterales", "clr": 2.2208966811753785, "W": 9}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;", "clr": 0.49790441661606316, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Arenicellales", "clr": 1.5555602906437347, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Betaproteobacteriales", "clr": 0.3901199572840297, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Coxiellales", "clr": 1.4992950433905747, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Diplorickettsiales", "clr": 0.8794257949468745, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Francisellales", "clr": 0.30995530295123935, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Ga0077536", "clr": 1.516805884282366, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Gammaproteobacteria_Incertae_Sedis", "clr": 0.8113453026297759, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Halothiobacillales", "clr": 5.84475530351261, "W": 9}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Legionellales", "clr": 1.7664375405889727, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Methylococcales", "clr": 0.6412207484329954, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Salinisphaerales", "clr": 0.3970496221680885, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Steroidobacterales", "clr": 0.6019020688945471, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;WD260", "clr": 0.6752848764221191, "W": 0}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X;Gammaproteobacteria;Xanthomonadales", "clr": 0.7960706739394663, "W": 0}, {"id": "Bacteria;PVC;;;;", "clr": 0.4457454468642336, "W": 0}, {"id": "Bacteria;PVC;Chlamydiae;Chlamydiae_X;Chlamydiae_XX;Chlamydiales", "clr": 1.4992950433905747, "W": 0}, {"id": "Bacteria;PVC;Kiritimatiellaeota;Kiritimatiellaeota_X;Kiritimatiellae;WCHB141", "clr": 0.772265096633189, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;;", "clr": 0.803035336593574, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;Phycisphaerae;Phycisphaerales", "clr": 0.5840914212228036, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;Planctomycetacia;", "clr": 0.5379033901072442, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;Planctomycetacia;Gemmatales", "clr": 0.6658852869612618, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;Planctomycetacia;Isosphaerales", "clr": 0.25236519570737054, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;Planctomycetacia;Pirellulales", "clr": 0.553628097311737, "W": 0}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X;Planctomycetacia;Planctomycetales", "clr": 0.1539227191340294, "W": 0}, {"id": "Bacteria;PVC;Verrucomicrobia;Verrucomicrobia_X;Verrucomicrobiae;", "clr": 1.1549318538129978, "W": 0}, {"id": "Bacteria;PVC;Verrucomicrobia;Verrucomicrobia_X;Verrucomicrobiae;Chthoniobacterales", "clr": 0.38876690707211353, "W": 0}, {"id": "Bacteria;PVC;Verrucomicrobia;Verrucomicrobia_X;Verrucomicrobiae;Opitutales", "clr": 0.6255526648857279, "W": 0}, {"id": "Bacteria;PVC;Verrucomicrobia;Verrucomicrobia_X;Verrucomicrobiae;Pedosphaerales", "clr": 0.3183702066990482, "W": 0}, {"id": "Bacteria;PVC;Verrucomicrobia;Verrucomicrobia_X;Verrucomicrobiae;Verrucomicrobiales", "clr": 0.4660626889075236, "W": 0}, {"id": "Bacteria;Terrabacteria;;;;", "clr": 0.460209311113447, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;;", "clr": 0.3815998111273054, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Acidimicrobiia;Microtrichales", "clr": 1.589444884740256, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Actinobacteria_XX;", "clr": 0.6249155894146144, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Actinobacteria_XX;Corynebacteriales", "clr": 0.33391653089678974, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Actinobacteria_XX;Frankiales", "clr": 1.5905459355124443, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Actinobacteria_XX;Micrococcales", "clr": 0.2986443276582793, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Actinobacteria_XX;Micromonosporales", "clr": 7.220088169161096, "W": 9}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Thermoleophilia;", "clr": 1.2826436158578889, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Thermoleophilia;Gaiellales", "clr": 0.4313444021557421, "W": 0}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X;Thermoleophilia;Solirubrobacterales", "clr": 0.1991745170307598, "W": 0}, {"id": "Bacteria;Terrabacteria;Armatimonadetes;Armatimonadetes_X;Armatimonadia;Armatimonadales", "clr": 0.38076084272885735, "W": 0}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;;", "clr": 0.2532415013765324, "W": 0}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;Bacilli;Bacillales", "clr": 2.4531011787895105, "W": 0}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;Bacilli;Lactobacillales", "clr": 8.60302961634585, "W": 9}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;Clostridia;", "clr": 0.8708695916187844, "W": 1}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;Clostridia;Clostridiales", "clr": 0.6111102168563227, "W": 0}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;Erysipelotrichia;Erysipelotrichales", "clr": 0.6287190597053377, "W": 0}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X;Negativicutes;Selenomonadales", "clr": 0.5335174209473246, "W": 0}, {"id": "Bacteria;Terrabacteria;Tenericutes;Tenericutes_X;Mollicutes;Mollicutes_RF39", "clr": 4.900555384642362, "W": 8}, {"id": "Eukaryota:mito;;;;;", "clr": 0.5226552176125999, "W": 0}, {"id": "Eukaryota:mito;Archaeplastida:mito;Streptophyta:mito;Streptophyta_X:mito;Embryophyceae:mito;Embryophyceae_X:mito", "clr": 0.9356467197476718, "W": 0}, {"id": "Eukaryota:mito;TSAR:mito;Stramenopiles:mito;Gyrista:mito;Eustigmatophyceae:mito;Eustigmatophyceae_X:mito", "clr": 0.7098071910890966, "W": 0}, {"id": "Eukaryota:plas;;;;;", "clr": 0.6499700501494015, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;;;;", "clr": 0.4197192493301154, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;;", "clr": 1.9784657309580498, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Chlorophyceae:plas;", "clr": 0.550360323947458, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Chlorophyceae:plas;Chlamydomonadales:plas", "clr": 0.835395103678434, "W": 9}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Chlorophyceae:plas;Chlorophyceae_X:plas", "clr": 0.891170472422266, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Chlorophyceae:plas;Sphaeropleales:plas", "clr": 0.9502927513189543, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Chlorophyta_XX:plas;Chlorophyta_XXX:plas", "clr": 0.36765439620011003, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Mamiellophyceae:plas;Monomastigales:plas", "clr": 1.681570905502648, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Nephroselmidophyceae:plas;Nephroselmidales:plas", "clr": 0.3037434284567129, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Pedinophyceae:plas;Pedinomonadales:plas", "clr": 0.5428303620618122, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Trebouxiophyceae:plas;", "clr": 0.7031179119285356, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Trebouxiophyceae:plas;Chlorellales:plas", "clr": 0.7828938408876915, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Trebouxiophyceae:plas;Prasiolales:plas", "clr": 1.3332114714858074, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Trebouxiophyceae:plas;Trebouxiophyceae_X:plas", "clr": 0.6361761718973195, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Trebouxiophyceae:plas;Watanabea-Clade:plas", "clr": 0.38906278279522793, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Glaucophyta:plas;Glaucophyta_X:plas;Glaucocystophyceae:plas;Glaucocystophytes:plas", "clr": 0.3780278371215329, "W": 0}, {"id": "Eukaryota:plas;Archaeplastida:plas;Streptophyta:plas;Streptophyta_X:plas;Zygnemophyceae:plas;Zygnemophyceae_X:plas", "clr": 9.57521706529333, "W": 9}, {"id": "Eukaryota:plas;Cryptista:plas;Cryptophyta:plas;Cryptophyta_X:plas;Cryptophyceae:plas;Cryptomonadales:plas", "clr": 1.1700365978256997, "W": 0}, {"id": "Eukaryota:plas;Cryptista:plas;Cryptophyta:plas;Cryptophyta_X:plas;Cryptophyceae:plas;Pyrenomonadales:plas", "clr": 1.1225686445766307, "W": 0}, {"id": "Eukaryota:plas;Excavata:plas;Discoba:plas;Euglenozoa:plas;Euglenida:plas;Euglenophyceae:plas", "clr": 1.1665439514852274, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Alveolata:plas;Dinoflagellata:plas;Dinophyceae:plas;Peridiniales:plas", "clr": 0.49760188610203376, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;;", "clr": 0.07759760261117496, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Bacillariophyceae:plas;Bacillariophyceae_X:plas", "clr": 0.7095263871208852, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Bacillariophyceae:plas;Licmophorales:plas", "clr": 0.44687076167214673, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Bacillariophyceae:plas;Thalassiophysales:plas", "clr": 0.7992283355958699, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Chrysophyceae:plas;", "clr": 0.5736468063215006, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Chrysophyceae:plas;Chrysophyceae_X:plas", "clr": 0.34393737433063354, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Chrysophyceae:plas;Ochromonadales:plas", "clr": 0.48982843208363436, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Coscinodiscophyceae:plas;Aulacoseirales:plas", "clr": 0.48749163798857126, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Eustigmatophyceae:plas;Eustigmatophyceae_X:plas", "clr": 0.9180224565663175, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Mediophyceae:plas;", "clr": 2.0383745362150796, "W": 1}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Mediophyceae:plas;Mediophyceae_X:plas", "clr": 0.6617660321223262, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Mediophyceae:plas;Thalassiosirales:plas", "clr": 0.4090987643804251, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Phaeophyceae:plas;Phaeophyceae_X:plas", "clr": 0.1320489691472326, "W": 0}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas;Xanthophyceae:plas;Xanthophyceae_X:plas", "clr": 0.5549508001661252, "W": 0}, {"id": "Eukaryota;;;;;", "clr": 2.5285278628497854, "W": 0}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Opisthosporidia;Microsporida", "clr": 4.273786057211299, "W": 9}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;;", "clr": 0.5545351010921497, "W": 0}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Haptoria_4", "clr": 0.36165511712403975, "W": 0}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Litostomatea_X", "clr": 3.4241481400358507, "W": 2}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Rhynchostomatia", "clr": 0.326445101719068, "W": 0}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata;Dinophyceae;", "clr": 0.25115249750600993, "W": 0}]}], "scales": [{"name": "xScale", "domain": {"data": "values", "field": "clr"}, "range": "width"}, {"name": "yScale", "domain": {"data": "values", "field": "W"}, "range": "height"}], "axes": [{"scale": "xScale", "orient": "bottom", "title": "clr"}, {"scale": "yScale", "orient": "left", "title": "W"}], "marks": [{"type": "symbol", "from": {"data": "values"}, "encode": {"hover": {"fill": {"value": "#FF0000"}, "opacity": {"value": 1}}, "enter": {"x": {"scale": "xScale", "field": "clr"}, "y": {"scale": "yScale", "field": "W"}}, "update": {"fill": {"value": "black"}, "opacity": {"value": 0.3}, "tooltip": {"signal": "{'title': datum['id'], 'clr': datum['clr'], 'W': datum['W']}"}}}}]}</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var spec = JSON.parse(document.getElementById('spec').innerHTML);
+
+    // Try and come up with a good initial estimate of plot dimensions,
+    // based on the browser dimensions.
+    var width = $('#plot').width() / 1.5;
+    var opts = {width: width, height: width / 2};
+
+    vegaEmbed('#plot', spec, opts).then(function(result) {
+      result.view.logLevel(vega.Warn);
+      // Stash the view object in global namespace for debugging purposes.
+      // Check out https://vega.github.io/vega/docs/api/debugging/
+      // for more details.
+      window.v = result.view;
+    }).catch(function(error) {
+      // From 'js-error-handler.html'
+      handleErrors([error], $('#plot'));
+    });
+
+    // Clean up the vega-embed toolbar
+    var toolbar = $('div .vega-actions').detach();
+    toolbar.addClass('btn-group');
+    toolbar.children('a').each(function() {
+      // NOTE: We're just skipping this bit until we get the plot working with
+      // Vega 5
+      if(this.innerHTML == "Open in Vega Editor"){
+        this.remove()
+        return true
+      }
+      $(this).addClass('btn btn-default');
+    });
+    $('<a href="data.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">Export as TSV</a>')
+      .prependTo(toolbar);
+    toolbar.appendTo('#toolbar');
+
+    // Util to mutate elements in-place
+    function cleanupEl(el, label, form_el) {
+      var e = $(el + ' .vega-bind');
+      e.children('span').replaceWith('<label>' + label + '&nbsp;</label');
+      if (form_el !== undefined) {
+        e.children(form_el).addClass('form-control');
+      }
+    }
+  });
+</script>
+
+
+  </body>
+</html>

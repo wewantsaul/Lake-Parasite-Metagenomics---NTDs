@@ -1,0 +1,12 @@
+sample	input_tax_filter	filtered_tax_filter	lost	retained_percent	lost_percent
+Baao_Agri_563	51686	51686.0	0.0	100.0	0.0
+Baao_Center_563	45184	45184.0	0.0	100.0	0.0
+Baao_Tribu_563	48516	48516.0	0.0	100.0	0.0
+Bato_Center_563	57720	57720.0	0.0	100.0	0.0
+Bato_Resid_563	41912	41912.0	0.0	100.0	0.0
+Bato_Tilap_563	56994	56994.0	0.0	100.0	0.0
+Bato_Tribu_563	43296	43296.0	0.0	100.0	0.0
+Buhi_Center_563	55533	55533.0	0.0	100.0	0.0
+Buhi_Resid_563	58592	58592.0	0.0	100.0	0.0
+Buhi_Tilap_563	60206	60206.0	0.0	100.0	0.0
+Buhi_Tribu_563	50919	50919.0	0.0	100.0	0.0

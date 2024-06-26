@@ -1,0 +1,4 @@
+Group 1,Group 2,Sample size,Permutations,pseudo-F,p-value,q-value
+Baao,Bato,7,999,7.627726274227075,0.026,0.031
+Baao,Buhi,7,999,34.083599294215475,0.031,0.031
+Bato,Buhi,8,999,14.089212861000654,0.026,0.031

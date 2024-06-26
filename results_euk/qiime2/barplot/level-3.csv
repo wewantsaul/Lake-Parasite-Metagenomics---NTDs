@@ -1,0 +1,12 @@
+index,Eukaryota;TSAR;Stramenopiles,Eukaryota;TSAR;Alveolata,Eukaryota;Archaeplastida;Chlorophyta,Eukaryota;Obazoa;Opisthokonta,Eukaryota;;,Eukaryota;TSAR;Rhizaria,Eukaryota;Cryptista;Cryptophyta,;;,Eukaryota;Archaeplastida;,Eukaryota;TSAR;,Eukaryota;Haptista;Centroplasthelida,Eukaryota;Archaeplastida;Streptophyta,Eukaryota;CRuMs;Collodictyonidae,Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas,Eukaryota;Amoebozoa;Tubulinea,Eukaryota;Amoebozoa;Discosea,Eukaryota:nucl;Cryptista:nucl;Cryptophyta:nucl,Eukaryota;Excavata;Discoba,Eukaryota;Archaeplastida;Glaucophyta,Eukaryota;Amoebozoa;Evosea,Eukaryota;Archaeplastida;Rhodelphidia,Eukaryota;Amoebozoa;,location,site
+Baao_Agri_EUK,16507.0,12713.0,20382.0,3349.0,1133.0,2428.0,2470.0,92.0,21.0,182.0,329.0,0.0,98.0,6.0,0.0,0.0,37.0,0.0,0.0,0.0,0.0,4.0,Baao,Agri
+Baao_Center_EUK,13724.0,8811.0,30035.0,1186.0,668.0,1049.0,227.0,31.0,0.0,59.0,92.0,0.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Baao,Center
+Baao_Tribu_EUK,13955.0,11135.0,35851.0,1652.0,1261.0,2352.0,371.0,202.0,7.0,112.0,189.0,0.0,31.0,9.0,0.0,0.0,2.0,0.0,6.0,0.0,0.0,0.0,Baao,Tribu
+Bato_Center_EUK,11625.0,29570.0,12076.0,10484.0,1640.0,1028.0,2181.0,237.0,6.0,129.0,17.0,280.0,23.0,0.0,0.0,0.0,84.0,10.0,0.0,0.0,5.0,0.0,Bato,Center
+Bato_Resid_EUK,8259.0,18231.0,34628.0,6816.0,521.0,810.0,5219.0,25.0,0.0,7.0,11.0,0.0,32.0,0.0,0.0,0.0,54.0,0.0,5.0,0.0,4.0,0.0,Bato,Resid
+Bato_Tilap_EUK,16687.0,25408.0,9951.0,6891.0,2204.0,1724.0,1704.0,481.0,0.0,68.0,42.0,194.0,142.0,7.0,0.0,0.0,75.0,0.0,0.0,6.0,4.0,0.0,Bato,Tilap
+Bato_Tribu_EUK,20677.0,14332.0,17637.0,9545.0,2712.0,1643.0,1706.0,459.0,24.0,27.0,54.0,157.0,279.0,0.0,0.0,0.0,74.0,0.0,0.0,0.0,0.0,0.0,Bato,Tribu
+Buhi_Center_EUK,22871.0,10388.0,12967.0,8826.0,1088.0,4231.0,380.0,229.0,0.0,48.0,94.0,611.0,236.0,0.0,12.0,0.0,0.0,3.0,0.0,0.0,108.0,0.0,Buhi,Center
+Buhi_Resid_EUK,21591.0,16725.0,8852.0,8031.0,1417.0,3174.0,1447.0,271.0,0.0,13.0,86.0,570.0,238.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,99.0,0.0,Buhi,Resid
+Buhi_Tilap_EUK,16664.0,10143.0,12794.0,9994.0,1349.0,3326.0,193.0,323.0,0.0,22.0,55.0,412.0,100.0,0.0,8.0,8.0,0.0,0.0,0.0,0.0,57.0,0.0,Buhi,Tipal
+Buhi_Tribu_EUK,13910.0,16768.0,6617.0,13856.0,934.0,2031.0,1580.0,215.0,0.0,32.0,99.0,323.0,146.0,0.0,0.0,0.0,12.0,0.0,0.0,0.0,115.0,0.0,Buhi,Tribu

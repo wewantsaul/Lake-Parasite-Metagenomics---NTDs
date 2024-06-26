@@ -1,0 +1,3 @@
+addSpecies	allowMultiple = FALSE, n = 1e5
+taxlevels	c("Domain","Supergroup","Division","Subdivision","Class","Order","Family","Genus","Species")
+seed	100

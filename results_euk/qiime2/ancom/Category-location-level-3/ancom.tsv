@@ -1,0 +1,23 @@
+	W	Reject null hypothesis
+Eukaryota;Archaeplastida;Rhodelphidia	19	True
+Eukaryota;Archaeplastida;Streptophyta	14	False
+Eukaryota;Haptista;Centroplasthelida	12	False
+Eukaryota;Obazoa;Opisthokonta	9	False
+Eukaryota:nucl;Cryptista:nucl;Cryptophyta:nucl	4	False
+Eukaryota;TSAR;Stramenopiles	4	False
+Eukaryota;TSAR;	3	False
+Eukaryota;TSAR;Rhizaria	3	False
+Eukaryota;TSAR;Alveolata	3	False
+Eukaryota;;	3	False
+Eukaryota;Amoebozoa;	3	False
+;;	2	False
+Eukaryota;Archaeplastida;	2	False
+Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas	2	False
+Eukaryota;Archaeplastida;Chlorophyta	2	False
+Eukaryota;Cryptista;Cryptophyta	1	False
+Eukaryota;CRuMs;Collodictyonidae	1	False
+Eukaryota;Amoebozoa;Discosea	1	False
+Eukaryota;Excavata;Discoba	1	False
+Eukaryota;Archaeplastida;Glaucophyta	1	False
+Eukaryota;Amoebozoa;Evosea	1	False
+Eukaryota;Amoebozoa;Tubulinea	0	False

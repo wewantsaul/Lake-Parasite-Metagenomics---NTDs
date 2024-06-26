@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_composition : ancom</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+  <script src="js/vega.min.js"></script>
+  <script src="js/vega-embed.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/spinkit.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+
+<div class="row">
+  <div class="col-lg-8">
+    <h3>ANCOM Volcano Plot</h3>
+    <div id="toolbar"></div>
+    
+    <div id="plot">
+      <div id="loading" class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-6">
+    <h4>ANCOM statistical results</h4>
+    
+      <div class="table-responsive">
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Fragilariales</th>
+      <td>179</td>
+    </tr>
+    <tr>
+      <th>Eukaryota;Archaeplastida;Streptophyta;Streptophyta_X;Zygnemophyceae;Zygnemophyceae_X</th>
+      <td>165</td>
+    </tr>
+    <tr>
+      <th>Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Nephroselmidophyceae;Nephroselmidales</th>
+      <td>162</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <a href="ancom.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+        Download table as TSV
+      </a>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Percentile abundances of features by group</h4>
+    
+      <div class="table-responsive">
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Percentile</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+    </tr>
+    <tr>
+      <th>Group</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Fragilariales</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.00</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1895.0</td>
+      <td>1907.0</td>
+      <td>1993.5</td>
+      <td>2402.0</td>
+      <td>3380.0</td>
+    </tr>
+    <tr>
+      <th>Eukaryota;Archaeplastida;Streptophyta;Streptophyta_X;Zygnemophyceae;Zygnemophyceae_X</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.00</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>321.0</td>
+      <td>390.0</td>
+      <td>490.5</td>
+      <td>579.0</td>
+      <td>612.0</td>
+    </tr>
+    <tr>
+      <th>Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Nephroselmidophyceae;Nephroselmidales</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>428.0</td>
+      <td>694.25</td>
+      <td>1086.5</td>
+      <td>1563.0</td>
+      <td>2082.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <a href="percent-abundances.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+        Download table as TSV
+      </a>
+    
+  </div>
+</div>
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+
+
+
+
+
+<script type="text/javascript">
+  function handleErrors(errors, element, msg) {
+    console.error(errors);
+    msg = msg === undefined ? '' : msg + '<br><br>';
+    var helpMsg = '<p class="alert alert-danger"> \
+                   There was an error loading and rendering the \
+                   visualization.<br><br>' + msg + 'Please \
+                   copy-and-paste the following error messages when \
+                   reporting this error (please be aware that the content \
+                   of your analysis data and/or metadata is included in \
+                   these messages):</p>';
+    var helpMsgDiv = $('<div></div>');
+    helpMsgDiv.append(helpMsg);
+    helpMsgDiv.append('<pre><code>' + errors.join('\n\n') + '</code></pre>');
+    element.replaceWith(helpMsgDiv);
+  }
+  window.onerror = function(error) {
+    handleErrors([error], $('#loading'));
+  };
+</script>
+
+<script id="spec" type="application/json">{"$schema": "https://vega.github.io/schema/vega/v4.json", "width": 300, "height": 300, "data": [{"name": "values", "values": [{"id": ";;;;;", "clr": 0.32057494757045474, "W": 11}, {"id": "Eukaryota:nucl;Cryptista:nucl;Cryptophyta:nucl;Cryptophyta_X:nucl;Cryptophyceae:nucl;Cryptomonadales:nucl", "clr": 9.290180162779176, "W": 14}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas;Trebouxiophyceae:plas;Watanabea-Clade:plas", "clr": 7.170676998178012, "W": 26}, {"id": "Eukaryota;;;;;", "clr": 0.6463346675766253, "W": 26}, {"id": "Eukaryota;Amoebozoa;;;;", "clr": 7.390418665249266, "W": 27}, {"id": "Eukaryota;Amoebozoa;Discosea;Discosea_X;Flabellinia;Vannellida", "clr": 0.6065980659218878, "W": 11}, {"id": "Eukaryota;Amoebozoa;Evosea;Evosea_X;Variosea;Variosea_X", "clr": 1.3967197003748513, "W": 20}, {"id": "Eukaryota;Amoebozoa;Tubulinea;Tubulinea_X;Echinamoebida;Echinamoebida_X", "clr": 1.0294813011946802, "W": 18}, {"id": "Eukaryota;Amoebozoa;Tubulinea;Tubulinea_X;Elardia;Euamoebida", "clr": 1.7088640790985412, "W": 9}, {"id": "Eukaryota;Archaeplastida;;;;", "clr": 3.089645235103232, "W": 13}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;;", "clr": 3.1959813795285728, "W": 3}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Chlorophyceae;", "clr": 11.859824061364712, "W": 28}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Chlorophyceae;Chlamydomonadales", "clr": 10.759738760418116, "W": 25}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Chlorophyceae;Chlorophyceae_X", "clr": 27.632733635419115, "W": 48}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Chlorophyceae;Sphaeropleales", "clr": 19.302893825834257, "W": 33}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Mamiellophyceae;Dolichomastigales", "clr": 6.048467074847363, "W": 12}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Mamiellophyceae;Monomastigales", "clr": 2.2594137825145437, "W": 23}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Nephroselmidophyceae;Nephroselmidales", "clr": 193.0987984295954, "W": 162}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Pedinophyceae;Pedinomonadales", "clr": 22.050410177061977, "W": 49}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Trebouxiophyceae;Chlorellales", "clr": 23.184803408841425, "W": 38}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Trebouxiophyceae;Trebouxiophyceae_X", "clr": 5.097040560902952, "W": 9}, {"id": "Eukaryota;Archaeplastida;Chlorophyta;Chlorophyta_X;Trebouxiophyceae;Watanabea-Clade", "clr": 71.78817433572209, "W": 134}, {"id": "Eukaryota;Archaeplastida;Glaucophyta;Glaucophyta_X;Glaucocystophyceae;Glaucocystophytes", "clr": 2.130177626005074, "W": 17}, {"id": "Eukaryota;Archaeplastida;Rhodelphidia;Rhodelphidia_X;Rhodelphea;Rhodelphida", "clr": 54.4821538426265, "W": 79}, {"id": "Eukaryota;Archaeplastida;Streptophyta;Streptophyta_X;Embryophyceae;Embryophyceae_X", "clr": 2.287177597006237, "W": 7}, {"id": "Eukaryota;Archaeplastida;Streptophyta;Streptophyta_X;Klebsormidiophyceae;Klebsormidiophyceae_X", "clr": 6.821029550876669, "W": 11}, {"id": "Eukaryota;Archaeplastida;Streptophyta;Streptophyta_X;Zygnemophyceae;Zygnemophyceae_X", "clr": 754.6698759322995, "W": 165}, {"id": "Eukaryota;CRuMs;Collodictyonidae;Collodictyonidae_X;Collodictyonidae_XX;Collodictyonidae_XXX", "clr": 1.5449748588043584, "W": 14}, {"id": "Eukaryota;Cryptista;Cryptophyta;Cryptophyta_X;Cryptophyceae;Cryptomonadales", "clr": 3.0695235698698853, "W": 6}, {"id": "Eukaryota;Cryptista;Cryptophyta;Cryptophyta_X;Cryptophyceae;Cryptophyceae_X", "clr": 49.97457579597597, "W": 88}, {"id": "Eukaryota;Cryptista;Cryptophyta;Cryptophyta_X;Cryptophyceae;Goniomonadales", "clr": 18.96655504602064, "W": 38}, {"id": "Eukaryota;Cryptista;Cryptophyta;Cryptophyta_X;Cryptophyceae;Pyrenomonadales", "clr": 4.242893778926104, "W": 13}, {"id": "Eukaryota;Excavata;Discoba;Discoba_X;Discoba_XX;Jakobida", "clr": 0.10968996659793263, "W": 14}, {"id": "Eukaryota;Haptista;Centroplasthelida;Centroplasthelida_X;Centroplasthelida_XX;Centroplasthelida_XXX", "clr": 18.81290954291645, "W": 33}, {"id": "Eukaryota;Haptista;Centroplasthelida;Centroplasthelida_X;Pterocystida;", "clr": 19.46890983737264, "W": 42}, {"id": "Eukaryota;Haptista;Centroplasthelida;Centroplasthelida_X;Pterocystida;Pterista", "clr": 4.467085374506208, "W": 13}, {"id": "Eukaryota;Haptista;Centroplasthelida;Centroplasthelida_X;Pterocystida;Raphidista", "clr": 12.888981912877547, "W": 30}, {"id": "Eukaryota;Obazoa;Opisthokonta;;;", "clr": 1.0000889900864303, "W": 6}, {"id": "Eukaryota;Obazoa;Opisthokonta;Choanoflagellata;Choanoflagellatea;", "clr": 1.7473720813248286, "W": 5}, {"id": "Eukaryota;Obazoa;Opisthokonta;Choanoflagellata;Choanoflagellatea;Choanoflagellatea_X", "clr": 12.0290359336294, "W": 29}, {"id": "Eukaryota;Obazoa;Opisthokonta;Choanoflagellata;Choanoflagellatea;Craspedida", "clr": 6.454665836573668, "W": 19}, {"id": "Eukaryota;Obazoa;Opisthokonta;Filasterea;Filasterea_X;Filasterea_XX", "clr": 5.985674285373284, "W": 14}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;;", "clr": 15.844138838419594, "W": 27}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Aphelidiomycota;Aphelidiales", "clr": 9.567114438674334, "W": 14}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Ascomycota;Pezizomycotina", "clr": 0.23423634839652496, "W": 9}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Ascomycota;Saccharomycotina", "clr": 3.2407321664960236, "W": 24}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Basidiomycota;Agaricomycotina", "clr": 0.4419024317183071, "W": 2}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Basidiomycota;Ustilaginomycotina", "clr": 0.84351017171099, "W": 4}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Blastocladiomycota;Blastocladiomycotina", "clr": 0.23662478719452382, "W": 2}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;", "clr": 6.727355082471557, "W": 25}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Chytridiales", "clr": 11.5089826826936, "W": 19}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Chytridiomycota_X", "clr": 21.14860999529954, "W": 55}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Cladochytriales", "clr": 2.351973106476288, "W": 13}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Gromochytriales", "clr": 10.452794452178816, "W": 16}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Lobulomycetales", "clr": 14.664239137706927, "W": 26}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Mesochytriales", "clr": 16.765714450469474, "W": 32}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Polychytriales", "clr": 4.949462096892235, "W": 21}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Polyphagales", "clr": 3.333320606961807, "W": 7}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Rhizophydiales", "clr": 37.603690786373576, "W": 54}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Spizellomycetales", "clr": 6.573580419018523, "W": 11}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Zygophlyctidales", "clr": 44.901709260454844, "W": 92}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Chytridiomycota;Zygorhizidiales", "clr": 102.94530235596478, "W": 84}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Fungi_X;Fungi_XX", "clr": 127.33393207993942, "W": 133}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Opisthosporidia;Microsporida", "clr": 1.562825627791274, "W": 6}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Rozellomycota;Rozellomycota_X", "clr": 5.736284895001733, "W": 18}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi;Zoopagomycota;Entomophthoromycotina", "clr": 7.2501772914981695, "W": 11}, {"id": "Eukaryota;Obazoa;Opisthokonta;Ichthyosporea;Dermocystida;Rhynosporidae", "clr": 0.9068321424790605, "W": 18}, {"id": "Eukaryota;Obazoa;Opisthokonta;Ichthyosporea;Ichthyophonida;Ichthyosphonida_X", "clr": 1.5032112661202406, "W": 7}, {"id": "Eukaryota;Obazoa;Opisthokonta;Ichthyosporea;Ichthyophonida;Pseudoperkinsidae", "clr": 7.293929477453719, "W": 23}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;;", "clr": 1.254075381125537, "W": 5}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Arthropoda;Crustacea", "clr": 0.73440314399397, "W": 0}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Arthropoda;Hexapoda", "clr": 5.476342622757128, "W": 27}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Bryozoa;Bryozoa_X", "clr": 0.9343161087874601, "W": 7}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Craniata;Craniata_X", "clr": 0.6344342714933687, "W": 0}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Gastrotricha;Gastrotricha_X", "clr": 3.3040398988900637, "W": 5}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Mollusca;Bivalvia", "clr": 7.521928948282466, "W": 19}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Porifera;Porifera_X", "clr": 1.9210481107024389, "W": 1}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa;Rotifera;Rotifera_X", "clr": 9.085250930800637, "W": 16}, {"id": "Eukaryota;Obazoa;Opisthokonta;Pluriformea;Pluriformea_X;Pluriformea_XX", "clr": 18.058047361629573, "W": 33}, {"id": "Eukaryota;TSAR;;;;", "clr": 5.139636367379161, "W": 25}, {"id": "Eukaryota;TSAR;Alveolata;;;", "clr": 10.357482849499199, "W": 28}, {"id": "Eukaryota;TSAR;Alveolata;Alveolata_X;Alveolata_XX;Alveolata_XXX", "clr": 5.612992991127541, "W": 11}, {"id": "Eukaryota;TSAR;Alveolata;Apicomplexa;Gregarinomorphea;Eugregarinorida", "clr": 0.06574572231077738, "W": 8}, {"id": "Eukaryota;TSAR;Alveolata;Apicomplexa;Gregarinomorphea;Neogregarinorida", "clr": 8.848340016594538, "W": 15}, {"id": "Eukaryota;TSAR;Alveolata;Chrompodellids;Colpodellidea;Colpodellida", "clr": 0.8762148614083596, "W": 7}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;;", "clr": 1.058278418831128, "W": 0}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;CONThreeP;CONThreeP_X", "clr": 83.32949391747245, "W": 112}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Colpodea;Colpodea_X", "clr": 17.1387218600171, "W": 36}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Heterotrichea;Heterotrichea_X", "clr": 8.461808671445288, "W": 7}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Haptoria_4", "clr": 7.687052579931766, "W": 10}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Haptoria_5", "clr": 0.8687125296990399, "W": 1}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Haptoria_6", "clr": 6.444502181562765, "W": 22}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Litostomatea_X", "clr": 0.479103778365856, "W": 17}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Litostomatea;Rhynchostomatia", "clr": 2.4815819589828454, "W": 1}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Nassophorea;Nassophorea_X", "clr": 1.8700947012717897, "W": 11}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Oligohymenophorea;", "clr": 1.6859012329351486, "W": 12}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Oligohymenophorea;Hymenostomatia", "clr": 4.223854640856768, "W": 6}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Oligohymenophorea;OLIGO4", "clr": 2.471705475327406, "W": 17}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Oligohymenophorea;Peniculia", "clr": 4.422892466600979, "W": 3}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Oligohymenophorea;Peritrichia_2", "clr": 21.12686192670351, "W": 46}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Oligohymenophorea;Scuticociliatia_2", "clr": 5.868128899303669, "W": 12}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Phyllopharyngea;Cyrtophoria_4", "clr": 8.749731489232577, "W": 23}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Phyllopharyngea;Cyrtophoria_8", "clr": 0.9256350106116912, "W": 16}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Phyllopharyngea;Rhynchodia", "clr": 7.293929477453719, "W": 23}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Phyllopharyngea;Suctoria", "clr": 1.3579354058418363, "W": 5}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Prostomatea;Prorodontida", "clr": 2.9083094317180342, "W": 24}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Prostomatea_1;Prostomatea_1_X", "clr": 1.60438980113049, "W": 2}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Spirotrichea;Choreotrichida", "clr": 8.347210505053825, "W": 6}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Spirotrichea;Choreotrichida-Tintinnina", "clr": 6.504713441115659, "W": 8}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Spirotrichea;Euplotia", "clr": 3.168953391188146, "W": 19}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Spirotrichea;Hypotrichia", "clr": 5.67625313542779, "W": 26}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora;Spirotrichea;Oligotrichida", "clr": 2.9744248774482895, "W": 0}, {"id": "Eukaryota;TSAR;Alveolata;Colponemidia;Colponemidia_X;Colponemida", "clr": 16.644671867060737, "W": 33}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata;Dinophyceae;", "clr": 11.736394145550424, "W": 26}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata;Dinophyceae;Dinophyceae_X", "clr": 0.8049470759649628, "W": 1}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniales", "clr": 15.671436240651367, "W": 44}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata;Dinophyceae;Peridiniales", "clr": 35.67205163161365, "W": 130}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata;Dinophyceae;Suessiales", "clr": 12.774391349620634, "W": 14}, {"id": "Eukaryota;TSAR;Alveolata;Perkinsea;Perkinsea_X;Perkinsea_XX", "clr": 29.669895279723974, "W": 50}, {"id": "Eukaryota;TSAR;Alveolata;Perkinsea;Perkinsida;Perkinsida_X", "clr": 21.439230921596508, "W": 28}, {"id": "Eukaryota;TSAR;Rhizaria;;;", "clr": 0.7175035535622407, "W": 3}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;;", "clr": 28.680634605299595, "W": 28}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Cercozoa_X;Cercozoa_XX", "clr": 11.10504104516847, "W": 20}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Endomyxa;Vampyrellida", "clr": 29.120268391649322, "W": 73}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Granofilosea;", "clr": 1.7367009589132973, "W": 23}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Granofilosea;Desmothoracida", "clr": 16.755071289659444, "W": 36}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Granofilosea;Filosa-Granofilosea_X", "clr": 14.940906959490281, "W": 33}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Granofilosea;Limnofilida", "clr": 549.1936828685159, "W": 131}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Imbricatea;Euglyphida", "clr": 7.380823786822266, "W": 19}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Imbricatea;Spongomonadida", "clr": 7.134126274604298, "W": 24}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Imbricatea;Thaumatomonadida", "clr": 0.7365422593184523, "W": 17}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Sarcomonadea;", "clr": 11.261329719951183, "W": 20}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Sarcomonadea;Cercomonadida", "clr": 12.958498274488605, "W": 23}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Sarcomonadea;Glissomonadida", "clr": 1.0181061953940893, "W": 14}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Sarcomonadea;Pansomonadida", "clr": 37.18142600828749, "W": 42}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Filosa-Thecofilosea;Filosa-Thecofilosea_X", "clr": 0.6654762883187325, "W": 9}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Novel-clade-10-12;", "clr": 38.9899991332448, "W": 71}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Novel-clade-10-12;Novel-clade-10", "clr": 3.1927876779242927, "W": 18}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Novel-clade-10-12;Novel-clade-12", "clr": 0.7106420801275918, "W": 16}, {"id": "Eukaryota;TSAR;Rhizaria;Cercozoa;Novel-clade-10-12;Tremulida", "clr": 0.7911255546095436, "W": 12}, {"id": "Eukaryota;TSAR;Rhizaria;Rhizaria_X;Rhizaria_XX;Aquavolonida", "clr": 0.9803959689478391, "W": 5}, {"id": "Eukaryota;TSAR;Stramenopiles;;;", "clr": 0.4762857530449711, "W": 1}, {"id": "Eukaryota;TSAR;Stramenopiles;Bigyra;Bicoecea;", "clr": 9.493972950474447, "W": 12}, {"id": "Eukaryota;TSAR;Stramenopiles;Bigyra;Bicoecea;Bicoecales", "clr": 12.878494882300735, "W": 26}, {"id": "Eukaryota;TSAR;Stramenopiles;Bigyra;Bicoecea;Pseudodendromonadales", "clr": 0.8771207958994889, "W": 21}, {"id": "Eukaryota;TSAR;Stramenopiles;Bigyra;Opalozoa;Opalozoa_X", "clr": 6.994499748688365, "W": 19}, {"id": "Eukaryota;TSAR;Stramenopiles;Bigyra;Sagenista;Labyrinthulomycetes", "clr": 130.7878763829611, "W": 76}, {"id": "Eukaryota;TSAR;Stramenopiles;Bigyra;Sagenista;Pseudophyllomitidae", "clr": 43.205475165281996, "W": 97}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;;", "clr": 2.013531098077786, "W": 6}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;", "clr": 1.3967197003748513, "W": 20}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Achnanthales", "clr": 69.27729022769503, "W": 81}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Bacillariales", "clr": 14.612628438726398, "W": 41}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Cymbellales", "clr": 0.35557515838349535, "W": 3}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Eunotiales", "clr": 4.361580622239018, "W": 18}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Fragilariales", "clr": 1092.8112955662573, "W": 179}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Licmophorales", "clr": 24.59278364408152, "W": 52}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Naviculales", "clr": 3.2625243757171423, "W": 14}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Bacillariophyceae;Surirellales", "clr": 1.077854152027351, "W": 19}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;", "clr": 4.697652474456798, "W": 4}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Chromulinales", "clr": 4.224940683523818, "W": 10}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Chrysophyceae_X", "clr": 17.83867863974109, "W": 38}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Chrysophyceae_env_clade-I", "clr": 1.1182130645013448, "W": 5}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Hydrurales", "clr": 24.305508559344258, "W": 58}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Ochromonadales", "clr": 5.989731664847208, "W": 14}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Paraphysomonadales", "clr": 15.85856850696901, "W": 17}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Chrysophyceae;Synurales", "clr": 1.6661584053591716, "W": 5}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Coscinodiscophyceae;Aulacoseirales", "clr": 49.395454051902234, "W": 114}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Dictyochophyceae;Dictyochophyceae_X", "clr": 6.902628458344201, "W": 24}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Eustigmatophyceae;Eustigmatophyceae_X", "clr": 154.09897862508285, "W": 61}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Hyphochytriomyceta;Hyphochytriales", "clr": 11.289152136093534, "W": 31}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Mediophyceae;", "clr": 2.231932665850957, "W": 11}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Mediophyceae;Thalassiosirales", "clr": 17.63841282039431, "W": 41}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Peronosporomycetes;Peronosporomycetes_X", "clr": 18.168773436640485, "W": 28}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Phaeothamniophyceae;", "clr": 8.519674491747217, "W": 27}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Pirsoniales;Pirsoniales_X", "clr": 2.3270124670522385, "W": 2}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Raphidophyceae;Raphidophyceae_X", "clr": 2.4896915665317985, "W": 15}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Synchromophyceae;Synchromophyceae_X", "clr": 14.33553756672151, "W": 29}, {"id": "Eukaryota;TSAR;Stramenopiles;Gyrista;Xanthophyceae;Xanthophyceae_X", "clr": 50.44262692375702, "W": 69}, {"id": "Eukaryota;TSAR;Stramenopiles;Stramenopiles_X;Stramenopiles_X-Group-3;Stramenopiles_X-Group-3_X", "clr": 11.49549515367229, "W": 22}, {"id": "Eukaryota;TSAR;Stramenopiles;Stramenopiles_X;Stramenopiles_XX;Stramenopiles_XXX", "clr": 10.878979977041341, "W": 25}]}], "scales": [{"name": "xScale", "domain": {"data": "values", "field": "clr"}, "range": "width"}, {"name": "yScale", "domain": {"data": "values", "field": "W"}, "range": "height"}], "axes": [{"scale": "xScale", "orient": "bottom", "title": "clr"}, {"scale": "yScale", "orient": "left", "title": "W"}], "marks": [{"type": "symbol", "from": {"data": "values"}, "encode": {"hover": {"fill": {"value": "#FF0000"}, "opacity": {"value": 1}}, "enter": {"x": {"scale": "xScale", "field": "clr"}, "y": {"scale": "yScale", "field": "W"}}, "update": {"fill": {"value": "black"}, "opacity": {"value": 0.3}, "tooltip": {"signal": "{'title': datum['id'], 'clr': datum['clr'], 'W': datum['W']}"}}}}]}</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var spec = JSON.parse(document.getElementById('spec').innerHTML);
+
+    // Try and come up with a good initial estimate of plot dimensions,
+    // based on the browser dimensions.
+    var width = $('#plot').width() / 1.5;
+    var opts = {width: width, height: width / 2};
+
+    vegaEmbed('#plot', spec, opts).then(function(result) {
+      result.view.logLevel(vega.Warn);
+      // Stash the view object in global namespace for debugging purposes.
+      // Check out https://vega.github.io/vega/docs/api/debugging/
+      // for more details.
+      window.v = result.view;
+    }).catch(function(error) {
+      // From 'js-error-handler.html'
+      handleErrors([error], $('#plot'));
+    });
+
+    // Clean up the vega-embed toolbar
+    var toolbar = $('div .vega-actions').detach();
+    toolbar.addClass('btn-group');
+    toolbar.children('a').each(function() {
+      // NOTE: We're just skipping this bit until we get the plot working with
+      // Vega 5
+      if(this.innerHTML == "Open in Vega Editor"){
+        this.remove()
+        return true
+      }
+      $(this).addClass('btn btn-default');
+    });
+    $('<a href="data.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">Export as TSV</a>')
+      .prependTo(toolbar);
+    toolbar.appendTo('#toolbar');
+
+    // Util to mutate elements in-place
+    function cleanupEl(el, label, form_el) {
+      var e = $(el + ' .vega-bind');
+      e.children('span').replaceWith('<label>' + label + '&nbsp;</label');
+      if (form_el !== undefined) {
+        e.children(form_el).addClass('form-control');
+      }
+    }
+  });
+</script>
+
+
+  </body>
+</html>

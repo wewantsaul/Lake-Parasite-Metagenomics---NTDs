@@ -1,0 +1,23 @@
+	W	Reject null hypothesis
+Eukaryota;Amoebozoa;	2	False
+Eukaryota;Amoebozoa;Evosea	2	False
+Eukaryota;Amoebozoa;Discosea	2	False
+Eukaryota;TSAR;Alveolata	0	False
+Eukaryota;Archaeplastida;Rhodelphidia	0	False
+Eukaryota;Archaeplastida;Glaucophyta	0	False
+Eukaryota;Excavata;Discoba	0	False
+Eukaryota:nucl;Cryptista:nucl;Cryptophyta:nucl	0	False
+Eukaryota;Amoebozoa;Tubulinea	0	False
+Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas	0	False
+Eukaryota;CRuMs;Collodictyonidae	0	False
+Eukaryota;TSAR;Stramenopiles	0	False
+Eukaryota;Haptista;Centroplasthelida	0	False
+Eukaryota;TSAR;	0	False
+Eukaryota;Archaeplastida;	0	False
+;;	0	False
+Eukaryota;Cryptista;Cryptophyta	0	False
+Eukaryota;TSAR;Rhizaria	0	False
+Eukaryota;;	0	False
+Eukaryota;Obazoa;Opisthokonta	0	False
+Eukaryota;Archaeplastida;Chlorophyta	0	False
+Eukaryota;Archaeplastida;Streptophyta	0	False

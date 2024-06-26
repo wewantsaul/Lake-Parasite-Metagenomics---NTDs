@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_composition : ancom</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+  <script src="js/vega.min.js"></script>
+  <script src="js/vega-embed.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/spinkit.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+
+<div class="row">
+  <div class="col-lg-8">
+    <h3>ANCOM Volcano Plot</h3>
+    <div id="toolbar"></div>
+    
+    <div id="plot">
+      <div id="loading" class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-6">
+    <h4>ANCOM statistical results</h4>
+    
+      <div class="table-responsive">
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bacteria;PVC;;</th>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>Bacteria;PVC;Planctomycetes;Planctomycetes_X</th>
+      <td>30</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <a href="ancom.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+        Download table as TSV
+      </a>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Percentile abundances of features by group</h4>
+    
+      <div class="table-responsive">
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Percentile</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+    </tr>
+    <tr>
+      <th>Group</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bacteria;PVC;;</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.00</td>
+      <td>1.0</td>
+      <td>1.00</td>
+      <td>1.0</td>
+      <td>27.0</td>
+      <td>30.75</td>
+      <td>32.5</td>
+      <td>36.25</td>
+      <td>46.0</td>
+    </tr>
+    <tr>
+      <th>Bacteria;PVC;Planctomycetes;Planctomycetes_X</th>
+      <td>53.0</td>
+      <td>139.5</td>
+      <td>226.0</td>
+      <td>260.5</td>
+      <td>295.0</td>
+      <td>887.0</td>
+      <td>1478.75</td>
+      <td>1860.0</td>
+      <td>2136.75</td>
+      <td>2415.0</td>
+      <td>7494.0</td>
+      <td>8069.25</td>
+      <td>8431.5</td>
+      <td>8743.75</td>
+      <td>9169.0</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <a href="percent-abundances.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+        Download table as TSV
+      </a>
+    
+  </div>
+</div>
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+
+
+
+
+
+<script type="text/javascript">
+  function handleErrors(errors, element, msg) {
+    console.error(errors);
+    msg = msg === undefined ? '' : msg + '<br><br>';
+    var helpMsg = '<p class="alert alert-danger"> \
+                   There was an error loading and rendering the \
+                   visualization.<br><br>' + msg + 'Please \
+                   copy-and-paste the following error messages when \
+                   reporting this error (please be aware that the content \
+                   of your analysis data and/or metadata is included in \
+                   these messages):</p>';
+    var helpMsgDiv = $('<div></div>');
+    helpMsgDiv.append(helpMsg);
+    helpMsgDiv.append('<pre><code>' + errors.join('\n\n') + '</code></pre>');
+    element.replaceWith(helpMsgDiv);
+  }
+  window.onerror = function(error) {
+    handleErrors([error], $('#loading'));
+  };
+</script>
+
+<script id="spec" type="application/json">{"$schema": "https://vega.github.io/schema/vega/v4.json", "width": 300, "height": 300, "data": [{"name": "values", "values": [{"id": ";;;", "clr": 0.8007485171931839, "W": 3}, {"id": "Bacteria;;;", "clr": 10.37138238326367, "W": 10}, {"id": "Bacteria;CCD;Chloroflexi;Chloroflexi_X", "clr": 8.229427267964235, "W": 7}, {"id": "Bacteria;CCD;Patescibacteria;Patescibacteria_X", "clr": 10.103425794992678, "W": 9}, {"id": "Bacteria;CMS;Cyanobacteria;Cyanobacteria_X", "clr": 7.3461927392064466, "W": 6}, {"id": "Bacteria;DST;Deinococcus_Thermus;Deinococcus_Thermus_X", "clr": 0.8875610599751094, "W": 0}, {"id": "Bacteria;FCB;Bacteroidetes;Bacteroidetes_X", "clr": 6.884143500227099, "W": 3}, {"id": "Bacteria;FCB;Fibrobacteres;Fibrobacteres_X", "clr": 8.785720498529757, "W": 6}, {"id": "Bacteria;FCB;Gemmatimonadetes;Gemmatimonadetes_X", "clr": 3.4626672041448434, "W": 6}, {"id": "Bacteria;Gracilicutes;Dependentiae;Dependentiae_X", "clr": 10.5686330519683, "W": 8}, {"id": "Bacteria;Gracilicutes;Fusobacteria;Fusobacteria_X", "clr": 0.4499660728982654, "W": 3}, {"id": "Bacteria;Gracilicutes;Spirochaetes;Spirochaetes_X", "clr": 3.6287535975056198, "W": 3}, {"id": "Bacteria;PANNAM;;", "clr": 1.117334398321773, "W": 0}, {"id": "Bacteria;PANNAM;Acidobacteria;Acidobacteria_X", "clr": 6.6684166360998525, "W": 1}, {"id": "Bacteria;PANNAM;Proteobacteria;Proteobacteria_X", "clr": 74.69054306217177, "W": 10}, {"id": "Bacteria;PVC;;", "clr": 177.33038027397026, "W": 36}, {"id": "Bacteria;PVC;Chlamydiae;Chlamydiae_X", "clr": 1.8365812787433988, "W": 3}, {"id": "Bacteria;PVC;Kiritimatiellaeota;Kiritimatiellaeota_X", "clr": 12.51515912844628, "W": 11}, {"id": "Bacteria;PVC;Planctomycetes;Planctomycetes_X", "clr": 37.777218521434555, "W": 30}, {"id": "Bacteria;PVC;Verrucomicrobia;Verrucomicrobia_X", "clr": 22.52936606931443, "W": 13}, {"id": "Bacteria;Terrabacteria;;", "clr": 15.712070858232455, "W": 18}, {"id": "Bacteria;Terrabacteria;Actinobacteria;Actinobacteria_X", "clr": 2.47947067980512, "W": 6}, {"id": "Bacteria;Terrabacteria;Armatimonadetes;Armatimonadetes_X", "clr": 9.132192825260676, "W": 6}, {"id": "Bacteria;Terrabacteria;Firmicutes;Firmicutes_X", "clr": 1.3472462170105048, "W": 0}, {"id": "Bacteria;Terrabacteria;Tenericutes;Tenericutes_X", "clr": 5.131635335548397, "W": 4}, {"id": "Eukaryota:mito;;;", "clr": 0.9927000317834862, "W": 0}, {"id": "Eukaryota:mito;Archaeplastida:mito;Streptophyta:mito;Streptophyta_X:mito", "clr": 12.775488921645758, "W": 11}, {"id": "Eukaryota:mito;TSAR:mito;Stramenopiles:mito;Gyrista:mito", "clr": 33.67560854362103, "W": 17}, {"id": "Eukaryota:plas;;;", "clr": 3.3350551080695565, "W": 1}, {"id": "Eukaryota:plas;Archaeplastida:plas;;", "clr": 0.049070312555800404, "W": 3}, {"id": "Eukaryota:plas;Archaeplastida:plas;Chlorophyta:plas;Chlorophyta_X:plas", "clr": 14.058353185915342, "W": 6}, {"id": "Eukaryota:plas;Archaeplastida:plas;Glaucophyta:plas;Glaucophyta_X:plas", "clr": 4.088492767501328, "W": 4}, {"id": "Eukaryota:plas;Archaeplastida:plas;Streptophyta:plas;Streptophyta_X:plas", "clr": 0.7474577204794167, "W": 0}, {"id": "Eukaryota:plas;Cryptista:plas;Cryptophyta:plas;Cryptophyta_X:plas", "clr": 13.321079236239935, "W": 8}, {"id": "Eukaryota:plas;Excavata:plas;Discoba:plas;Euglenozoa:plas", "clr": 8.569279310845811, "W": 3}, {"id": "Eukaryota:plas;TSAR:plas;Alveolata:plas;Dinoflagellata:plas", "clr": 15.435815173870903, "W": 15}, {"id": "Eukaryota:plas;TSAR:plas;Stramenopiles:plas;Gyrista:plas", "clr": 5.045459578551678, "W": 7}, {"id": "Eukaryota;;;", "clr": 2.8157933850354544, "W": 1}, {"id": "Eukaryota;Obazoa;Opisthokonta;Fungi", "clr": 0.9843496222019579, "W": 2}, {"id": "Eukaryota;Obazoa;Opisthokonta;Metazoa", "clr": 1.3506104242206325, "W": 2}, {"id": "Eukaryota;TSAR;Alveolata;Ciliophora", "clr": 0.8857231658305023, "W": 0}, {"id": "Eukaryota;TSAR;Alveolata;Dinoflagellata", "clr": 3.149146099318712, "W": 4}]}], "scales": [{"name": "xScale", "domain": {"data": "values", "field": "clr"}, "range": "width"}, {"name": "yScale", "domain": {"data": "values", "field": "W"}, "range": "height"}], "axes": [{"scale": "xScale", "orient": "bottom", "title": "clr"}, {"scale": "yScale", "orient": "left", "title": "W"}], "marks": [{"type": "symbol", "from": {"data": "values"}, "encode": {"hover": {"fill": {"value": "#FF0000"}, "opacity": {"value": 1}}, "enter": {"x": {"scale": "xScale", "field": "clr"}, "y": {"scale": "yScale", "field": "W"}}, "update": {"fill": {"value": "black"}, "opacity": {"value": 0.3}, "tooltip": {"signal": "{'title': datum['id'], 'clr': datum['clr'], 'W': datum['W']}"}}}}]}</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var spec = JSON.parse(document.getElementById('spec').innerHTML);
+
+    // Try and come up with a good initial estimate of plot dimensions,
+    // based on the browser dimensions.
+    var width = $('#plot').width() / 1.5;
+    var opts = {width: width, height: width / 2};
+
+    vegaEmbed('#plot', spec, opts).then(function(result) {
+      result.view.logLevel(vega.Warn);
+      // Stash the view object in global namespace for debugging purposes.
+      // Check out https://vega.github.io/vega/docs/api/debugging/
+      // for more details.
+      window.v = result.view;
+    }).catch(function(error) {
+      // From 'js-error-handler.html'
+      handleErrors([error], $('#plot'));
+    });
+
+    // Clean up the vega-embed toolbar
+    var toolbar = $('div .vega-actions').detach();
+    toolbar.addClass('btn-group');
+    toolbar.children('a').each(function() {
+      // NOTE: We're just skipping this bit until we get the plot working with
+      // Vega 5
+      if(this.innerHTML == "Open in Vega Editor"){
+        this.remove()
+        return true
+      }
+      $(this).addClass('btn btn-default');
+    });
+    $('<a href="data.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">Export as TSV</a>')
+      .prependTo(toolbar);
+    toolbar.appendTo('#toolbar');
+
+    // Util to mutate elements in-place
+    function cleanupEl(el, label, form_el) {
+      var e = $(el + ' .vega-bind');
+      e.children('span').replaceWith('<label>' + label + '&nbsp;</label');
+      if (form_el !== undefined) {
+        e.children(form_el).addClass('form-control');
+      }
+    }
+  });
+</script>
+
+
+  </body>
+</html>

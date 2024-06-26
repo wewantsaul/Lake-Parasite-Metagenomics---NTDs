@@ -1,0 +1,12 @@
+sample	input_tax_filter	filtered_tax_filter	lost	retained_percent	lost_percent
+Baao_Agri_EUK	59751	59751.0	0.0	100.0	0.0
+Baao_Center_EUK	55898	55898.0	0.0	100.0	0.0
+Baao_Tribu_EUK	67135	67135.0	0.0	100.0	0.0
+Bato_Center_EUK	69395	69395.0	0.0	100.0	0.0
+Bato_Resid_EUK	74622	74622.0	0.0	100.0	0.0
+Bato_Tilap_EUK	65588	65588.0	0.0	100.0	0.0
+Bato_Tribu_EUK	69326	69326.0	0.0	100.0	0.0
+Buhi_Center_EUK	62092	62092.0	0.0	100.0	0.0
+Buhi_Resid_EUK	62516	62516.0	0.0	100.0	0.0
+Buhi_Tilap_EUK	55448	55448.0	0.0	100.0	0.0
+Buhi_Tribu_EUK	56638	56638.0	0.0	100.0	0.0

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_composition : ancom</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/base-template.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/bootstrap.min.js" charset="utf-8"></script>
+    
+  <script src="js/vega.min.js"></script>
+  <script src="js/vega-embed.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/spinkit.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="q2templatesheader" class="row">
+        <div class="col-lg-12">
+          <a href="http://qiime2.org/">
+            <img src="./q2templateassets/img/qiime2-rect-200.png"
+            alt="QIIME 2">
+          </a>
+        </div>
+      </div>
+        
+
+<div class="row">
+  <div class="col-lg-8">
+    <h3>ANCOM Volcano Plot</h3>
+    <div id="toolbar"></div>
+    
+    <div id="plot">
+      <div id="loading" class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-6">
+    <h4>ANCOM statistical results</h4>
+    
+      <div class="table-responsive">
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Eukaryota:plas;Cryptista:plas</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>Bacteria;PVC</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Eukaryota:mito;TSAR:mito</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>Eukaryota:mito;Archaeplastida:mito</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>Bacteria;PANNAM</th>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <a href="ancom.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+        Download table as TSV
+      </a>
+    
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h4>Percentile abundances of features by group</h4>
+    
+      <div class="table-responsive">
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Percentile</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+      <th>0.0</th>
+      <th>25.0</th>
+      <th>50.0</th>
+      <th>75.0</th>
+      <th>100.0</th>
+    </tr>
+    <tr>
+      <th>Group</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Baao</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Bato</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+      <th>Buhi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Eukaryota:plas;Cryptista:plas</th>
+      <td>63.0</td>
+      <td>141.5</td>
+      <td>220.0</td>
+      <td>384.0</td>
+      <td>548.0</td>
+      <td>347.0</td>
+      <td>574.25</td>
+      <td>683.0</td>
+      <td>823.50</td>
+      <td>1146.0</td>
+      <td>5.0</td>
+      <td>10.25</td>
+      <td>29.0</td>
+      <td>56.25</td>
+      <td>87.0</td>
+    </tr>
+    <tr>
+      <th>Bacteria;PVC</th>
+      <td>1663.0</td>
+      <td>1672.0</td>
+      <td>1681.0</td>
+      <td>1870.5</td>
+      <td>2060.0</td>
+      <td>1300.0</td>
+      <td>2720.50</td>
+      <td>3396.5</td>
+      <td>3640.00</td>
+      <td>3763.0</td>
+      <td>10102.0</td>
+      <td>11971.75</td>
+      <td>12633.0</td>
+      <td>13047.50</td>
+      <td>14177.0</td>
+    </tr>
+    <tr>
+      <th>Eukaryota:mito;TSAR:mito</th>
+      <td>25.0</td>
+      <td>30.0</td>
+      <td>35.0</td>
+      <td>37.0</td>
+      <td>39.0</td>
+      <td>106.0</td>
+      <td>138.25</td>
+      <td>151.0</td>
+      <td>175.75</td>
+      <td>244.0</td>
+      <td>230.0</td>
+      <td>231.50</td>
+      <td>252.0</td>
+      <td>278.75</td>
+      <td>299.0</td>
+    </tr>
+    <tr>
+      <th>Eukaryota:mito;Archaeplastida:mito</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>14.0</td>
+      <td>41.00</td>
+      <td>52.0</td>
+      <td>64.00</td>
+      <td>94.0</td>
+      <td>1.0</td>
+      <td>1.00</td>
+      <td>1.0</td>
+      <td>4.25</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>Bacteria;PANNAM</th>
+      <td>14579.0</td>
+      <td>15319.5</td>
+      <td>16060.0</td>
+      <td>16767.5</td>
+      <td>17475.0</td>
+      <td>4941.0</td>
+      <td>5962.50</td>
+      <td>7478.5</td>
+      <td>9017.25</td>
+      <td>10107.0</td>
+      <td>6384.0</td>
+      <td>6574.50</td>
+      <td>7510.0</td>
+      <td>8512.00</td>
+      <td>8902.0</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <a href="percent-abundances.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">
+        Download table as TSV
+      </a>
+    
+  </div>
+</div>
+
+    </div>
+    <script type="text/javascript">
+      if (window.frameElement) {
+          document.getElementById('q2templatesheader').remove();
+      }
+    </script>
+    
+
+
+
+
+
+<script type="text/javascript">
+  function handleErrors(errors, element, msg) {
+    console.error(errors);
+    msg = msg === undefined ? '' : msg + '<br><br>';
+    var helpMsg = '<p class="alert alert-danger"> \
+                   There was an error loading and rendering the \
+                   visualization.<br><br>' + msg + 'Please \
+                   copy-and-paste the following error messages when \
+                   reporting this error (please be aware that the content \
+                   of your analysis data and/or metadata is included in \
+                   these messages):</p>';
+    var helpMsgDiv = $('<div></div>');
+    helpMsgDiv.append(helpMsg);
+    helpMsgDiv.append('<pre><code>' + errors.join('\n\n') + '</code></pre>');
+    element.replaceWith(helpMsgDiv);
+  }
+  window.onerror = function(error) {
+    handleErrors([error], $('#loading'));
+  };
+</script>
+
+<script id="spec" type="application/json">{"$schema": "https://vega.github.io/schema/vega/v4.json", "width": 300, "height": 300, "data": [{"name": "values", "values": [{"id": ";", "clr": 0.2865062522136515, "W": 3}, {"id": "Bacteria;", "clr": 10.182122954308626, "W": 6}, {"id": "Bacteria;CCD", "clr": 6.738271523285086, "W": 7}, {"id": "Bacteria;CMS", "clr": 4.142415428612646, "W": 5}, {"id": "Bacteria;DST", "clr": 0.3859794435223575, "W": 0}, {"id": "Bacteria;FCB", "clr": 8.622997114070376, "W": 3}, {"id": "Bacteria;Gracilicutes", "clr": 12.60532689645335, "W": 5}, {"id": "Bacteria;PANNAM", "clr": 111.12101190323337, "W": 9}, {"id": "Bacteria;PVC", "clr": 34.22627441381075, "W": 11}, {"id": "Bacteria;Terrabacteria", "clr": 24.269801468756853, "W": 7}, {"id": "Eukaryota:mito;", "clr": 1.3814195378813785, "W": 0}, {"id": "Eukaryota:mito;Archaeplastida:mito", "clr": 12.575630676330634, "W": 10}, {"id": "Eukaryota:mito;TSAR:mito", "clr": 28.742776126294352, "W": 10}, {"id": "Eukaryota:plas;", "clr": 4.102641296548261, "W": 2}, {"id": "Eukaryota:plas;Archaeplastida:plas", "clr": 15.338796798829923, "W": 4}, {"id": "Eukaryota:plas;Cryptista:plas", "clr": 12.934298163014667, "W": 13}, {"id": "Eukaryota:plas;Excavata:plas", "clr": 8.474018242509722, "W": 3}, {"id": "Eukaryota:plas;TSAR:plas", "clr": 0.7918882324710332, "W": 6}, {"id": "Eukaryota;", "clr": 2.3067399706119973, "W": 0}, {"id": "Eukaryota;Obazoa", "clr": 0.0016944928215181106, "W": 0}, {"id": "Eukaryota;TSAR", "clr": 0.7109704528295626, "W": 0}]}], "scales": [{"name": "xScale", "domain": {"data": "values", "field": "clr"}, "range": "width"}, {"name": "yScale", "domain": {"data": "values", "field": "W"}, "range": "height"}], "axes": [{"scale": "xScale", "orient": "bottom", "title": "clr"}, {"scale": "yScale", "orient": "left", "title": "W"}], "marks": [{"type": "symbol", "from": {"data": "values"}, "encode": {"hover": {"fill": {"value": "#FF0000"}, "opacity": {"value": 1}}, "enter": {"x": {"scale": "xScale", "field": "clr"}, "y": {"scale": "yScale", "field": "W"}}, "update": {"fill": {"value": "black"}, "opacity": {"value": 0.3}, "tooltip": {"signal": "{'title': datum['id'], 'clr': datum['clr'], 'W': datum['W']}"}}}}]}</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var spec = JSON.parse(document.getElementById('spec').innerHTML);
+
+    // Try and come up with a good initial estimate of plot dimensions,
+    // based on the browser dimensions.
+    var width = $('#plot').width() / 1.5;
+    var opts = {width: width, height: width / 2};
+
+    vegaEmbed('#plot', spec, opts).then(function(result) {
+      result.view.logLevel(vega.Warn);
+      // Stash the view object in global namespace for debugging purposes.
+      // Check out https://vega.github.io/vega/docs/api/debugging/
+      // for more details.
+      window.v = result.view;
+    }).catch(function(error) {
+      // From 'js-error-handler.html'
+      handleErrors([error], $('#plot'));
+    });
+
+    // Clean up the vega-embed toolbar
+    var toolbar = $('div .vega-actions').detach();
+    toolbar.addClass('btn-group');
+    toolbar.children('a').each(function() {
+      // NOTE: We're just skipping this bit until we get the plot working with
+      // Vega 5
+      if(this.innerHTML == "Open in Vega Editor"){
+        this.remove()
+        return true
+      }
+      $(this).addClass('btn btn-default');
+    });
+    $('<a href="data.tsv" target="_blank" rel="noopener noreferrer" class="btn btn-default">Export as TSV</a>')
+      .prependTo(toolbar);
+    toolbar.appendTo('#toolbar');
+
+    // Util to mutate elements in-place
+    function cleanupEl(el, label, form_el) {
+      var e = $(el + ' .vega-bind');
+      e.children('span').replaceWith('<label>' + label + '&nbsp;</label');
+      if (form_el !== undefined) {
+        e.children(form_el).addClass('form-control');
+      }
+    }
+  });
+</script>
+
+
+  </body>
+</html>

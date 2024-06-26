@@ -1,0 +1,4 @@
+Group 1,Group 2,H,p-value,q-value
+Baao (n=3),Bato (n=4),0.0,1.0,1.0
+Baao (n=3),Buhi (n=4),0.0,1.0,1.0
+Bato (n=4),Buhi (n=4),0.33333333333333215,0.5637028616507738,1.0
